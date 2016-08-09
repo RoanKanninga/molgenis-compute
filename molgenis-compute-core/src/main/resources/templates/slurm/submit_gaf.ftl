@@ -1,3 +1,6 @@
+set -e
+set -u
+
 # First cd to the directory with the *.sh and *.finished scripts
 <#noparse>
 MOLGENIS_scriptsDir=$( cd -P "$( dirname "$0" )" && pwd )
@@ -61,6 +64,7 @@ fi
 if [ -f submitted_jobIDs.txt ]
 then
 	stop submitted_jobIDs.txt
+	sleep 30
 fi
 
 </#noparse>
